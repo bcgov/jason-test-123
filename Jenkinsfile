@@ -4,7 +4,7 @@ podTemplate(label: "xgLOBPyM", name: "xgLOBPyM", serviceAccount: 'jenkins', clou
   containers: [
     containerTemplate(
       name: 'jnlp',
-      image: 'image-registry.apps.klab.devops.gov.bc.ca/openshift/nodejs:latest',
+      image: 'image-registry.apps.klab.devops.gov.bc.ca:5000/openshift/nodejs:latest',
       resourceRequestCpu: '500m',
       resourceLimitCpu: '500m',
       resourceRequestMemory: '1Gi',
