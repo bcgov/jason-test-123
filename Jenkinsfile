@@ -1,6 +1,10 @@
+import groovy.json.JsonOutput
+
+def APP_NAME = 'range-myra-api'
+def POD_LABEL = "${APP_NAME}-${UUID.randomUUID().toString()}"
 
 // See https://github.com/jenkinsci/kubernetes-plugin
-podTemplate(label: "ZbQCJoUY", name: "ZbQCJoUY", serviceAccount: 'jenkins', cloud: 'openshift',
+podTemplate(label: "ZbQCJoUY", name: "${POD_LABEL}", serviceAccount: 'jenkins', cloud: 'openshift',
   containers: [
     containerTemplate(
       name: 'jnlp',
@@ -16,7 +20,7 @@ podTemplate(label: "ZbQCJoUY", name: "ZbQCJoUY", serviceAccount: 'jenkins', clou
     )
   ]
 ) {
-  node("ZbQCJoUY") {
+  node("${POD_LABEL}") {
     stage('X') {
       checkout scm
     }
