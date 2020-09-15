@@ -1,6 +1,6 @@
 
 // See https://github.com/jenkinsci/kubernetes-plugin
-podTemplate(label: "${POD_LABEL}", name: "${POD_LABEL}", serviceAccount: 'jenkins', cloud: 'openshift',
+podTemplate(label: "xgLOBPyM", name: "xgLOBPyM", serviceAccount: 'jenkins', cloud: 'openshift',
   containers: [
     containerTemplate(
       name: 'jnlp',
