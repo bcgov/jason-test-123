@@ -18,8 +18,13 @@ podTemplate(label: "${POD_LABEL}", name: "${POD_LABEL}", serviceAccount: 'jenkin
   volumes: [persistentVolumeClaim(claimName: 'jenkins-workspace', mountPath: '/var/tmp/workspace')]
 ) {
   node("${POD_LABEL}") {
+    stage('X') {
+      checkout scm
+    }
+    
     stage('Setup') {
       echo "Setup: ${BUILD_ID}"
+    
       sh "node -v"
       sh "npm -v"
       sh "npm ci"
