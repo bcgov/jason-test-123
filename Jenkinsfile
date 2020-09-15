@@ -1,6 +1,6 @@
 
 // See https://github.com/jenkinsci/kubernetes-plugin
-podTemplate(label: "ZbQCJoUY", name: "ZbQCJoUY", serviceAccount: 'jenkins', cloud: 'openshift',
+podTemplate(label: "jenkins=slave", name: "ZbQCJoUY", serviceAccount: 'jenkins', cloud: 'openshift',
   containers: [
     containerTemplate(
       name: 'jnlp',
