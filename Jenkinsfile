@@ -14,8 +14,7 @@ podTemplate(label: "xgLOBPyM", name: "xgLOBPyM", serviceAccount: 'jenkins', clou
       args: '${computer.jnlpmac} ${computer.name}',
       alwaysPullImage: false
     )
-  ],
-  volumes: [persistentVolumeClaim(claimName: 'jenkins-workspace', mountPath: '/var/tmp/workspace')]
+  ]
 ) {
   node("xgLOBPyM") {
     stage('X') {
