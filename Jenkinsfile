@@ -17,7 +17,7 @@ podTemplate(label: "xgLOBPyM", name: "xgLOBPyM", serviceAccount: 'jenkins', clou
   ],
   volumes: [persistentVolumeClaim(claimName: 'jenkins-workspace', mountPath: '/var/tmp/workspace')]
 ) {
-  node("${POD_LABEL}") {
+  node("xgLOBPyM") {
     stage('X') {
       checkout scm
     }
