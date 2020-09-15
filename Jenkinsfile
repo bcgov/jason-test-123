@@ -26,7 +26,7 @@ podTemplate(label: "ZbQCJoUY", name: "ZbQCJoUY", serviceAccount: 'jenkins', clou
     
       sh "node -v"
       sh "npm -v"
-      sh "npm ci"
+      sh "printenv"
     }
   }
 }
