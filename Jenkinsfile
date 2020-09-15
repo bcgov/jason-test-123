@@ -4,7 +4,7 @@ podTemplate(label: "ZbQCJoUY", name: "ZbQCJoUY", serviceAccount: 'jenkins', clou
   containers: [
     containerTemplate(
       name: 'jnlp',
-      image: 'openshift/nodejs:latest',
+      image: 'image-registry.openshift-image-registry.svc:5000/openshift/nodejs:latest',
       resourceRequestCpu: '500m',
       resourceLimitCpu: '500m',
       resourceRequestMemory: '1Gi',
