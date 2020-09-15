@@ -1,6 +1,6 @@
 
 // See https://github.com/jenkinsci/kubernetes-plugin
-podTemplate(label: "${JENKINS_AGENT_NAME}", name: "${JENKINS_AGENT_NAME}", serviceAccount: 'jenkins', cloud: 'openshift',
+podTemplate(label: "ZbQCJoUY", name: "ZbQCJoUY", serviceAccount: 'jenkins', cloud: 'openshift',
   containers: [
     containerTemplate(
       name: 'jnlp',
@@ -16,7 +16,7 @@ podTemplate(label: "${JENKINS_AGENT_NAME}", name: "${JENKINS_AGENT_NAME}", servi
     )
   ]
 ) {
-  node("${JENKINS_AGENT_NAME}") {
+  node("ZbQCJoUY") {
     stage('X') {
       checkout scm
     }
