@@ -21,7 +21,7 @@ podTemplate(label: "${POD_LABEL}", name: "${POD_LABEL}", serviceAccount: 'jenkin
   ]
 ) {
   node("${POD_LABEL}") {
-    stage('X') {
+    stage('Checkout Code') {
       checkout scm
     }
     
