@@ -4,7 +4,7 @@ podTemplate(label: "${JENKINS_AGENT_NAME}", name: "${JENKINS_AGENT_NAME}", servi
   containers: [
     containerTemplate(
       name: 'jnlp',
-      image: 'image-registry.apps.klab.devops.gov.bc.ca:5000/openshift/nodejs:latest',
+      image: 'nodejs:latest',
       resourceRequestCpu: '500m',
       resourceLimitCpu: '500m',
       resourceRequestMemory: '1Gi',
