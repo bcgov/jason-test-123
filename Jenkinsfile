@@ -5,10 +5,10 @@ podTemplate(label: "xgLOBPyM", name: "xgLOBPyM", serviceAccount: 'jenkins', clou
     containerTemplate(
       name: 'jnlp',
       image: 'docker-registry.default.svc:5000/openshift/nodejs:10',
-      resourceRequestCpu: '1500m',
-      resourceLimitCpu: '2000m',
+      resourceRequestCpu: '500m',
+      resourceLimitCpu: '500m',
       resourceRequestMemory: '1Gi',
-      resourceLimitMemory: '2Gi',
+      resourceLimitMemory: '1Gi',
       workingDir: '/var/tmp',
       command: '',
       args: '${computer.jnlpmac} ${computer.name}',
