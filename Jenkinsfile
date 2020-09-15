@@ -4,7 +4,7 @@ def APP_NAME = 'my-cool-app'
 def POD_LABEL = "${APP_NAME}-${UUID.randomUUID().toString()}"
 
 // See https://github.com/jenkinsci/kubernetes-plugin
-podTemplate(label: "slave", name: "${POD_LABEL}", serviceAccount: 'jenkins', cloud: 'openshift',
+podTemplate(label: "${POD_LABEL}", name: "${POD_LABEL}", serviceAccount: 'jenkins', cloud: 'openshift',
   containers: [
     containerTemplate(
       name: 'jnlp',
